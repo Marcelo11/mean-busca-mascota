@@ -1,0 +1,20 @@
+<div class="container">
+
+      <form class="form-signin" name="forma">
+	 <div class="form-group" ng-class="{'has-error': forma.usuario.$invalid, 'has-success': forma.usuario.$valid}">
+        <h2 class="form-signin-heading">Login</h2>
+        <label for="inputUsuario" class="sr-only">Usuario</label>
+        <input type="text" id="inputUsuario" class="form-control" placeholder="Usuario" name="usuario" required autofocus ng-model="user.username">
+	</div>
+	<div class="form-group" ng-class="{'has-error': forma.pass.$invalid, 'has-success': forma.pass.$valid}">
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="pass" required ng-model="user.password">
+	</div>	
+        <button class="btn btn-lg btn-primary btn-block" type="submit" ng-click="login(user)" ng-disabled="forma.$invalid">Ingresar</button>
+      </form>
+<!-- <div class="alert alert-danger fade in" ng-show="alertVisible">
+    <strong>Error:</strong> Usuario no valido.
+</div> -->
+
+    </div> 
+	
